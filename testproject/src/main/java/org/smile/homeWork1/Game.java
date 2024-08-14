@@ -1,4 +1,4 @@
-package org.smile.home;
+package org.smile.homeWork1;
 
 import java.util.Random;
 
