@@ -14,9 +14,9 @@ public class OneDayOfDailyIndexValuesForASpecificIndexTest extends AccuweatherAb
     void getOneDayOfDailyIndexValuesForASpecificIndex() {
 
         List<Index> response = given()
-                .queryParam("apikey", getApiKey())
+                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
                 .when()
-                .get(getBaseUrl()+"/indices/v1/daily/1day/5/8")
+                .get(AccuweatherAbstractTest.getBaseUrl()+"/indices/v1/daily/1day/5/8")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

@@ -14,10 +14,10 @@ public class CitySearchTest extends AccuweatherAbstractTest {
     void getCitySearch() {
 
         List<Location> response = given()
-                .queryParam("apikey", getApiKey())
+                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
                 .queryParam("q", "Barnaul")
                 .when()
-                .get(getBaseUrl()+"/locations/v1/cities/search")
+                .get(AccuweatherAbstractTest.getBaseUrl()+"/locations/v1/cities/search")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

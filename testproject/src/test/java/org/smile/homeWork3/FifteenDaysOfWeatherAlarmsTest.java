@@ -13,8 +13,8 @@ public class FifteenDaysOfWeatherAlarmsTest extends AccuweatherAbstractTest {
 
         given()
                 .when()
-                .queryParam("apikey", getApiKey())
-                .get(getBaseUrl()+"/alarms/v1/15day//290421")
+                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .get(AccuweatherAbstractTest.getBaseUrl()+"/alarms/v1/15day//290421")
                 .then()
                 .statusCode(401)
                 .time(lessThan(2000L))

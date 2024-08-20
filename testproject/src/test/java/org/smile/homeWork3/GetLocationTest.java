@@ -13,10 +13,10 @@ public class GetLocationTest extends AccuweatherAbstractTest {
     void getGetLocation() {
 
         List<Location> result = given()
-                .queryParam("apikey", getApiKey())
+                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
                 .queryParam("q", "Barnaul")
                 .when()
-                .get(getBaseUrl()+"/locations/v1/cities/autocomplete")
+                .get(AccuweatherAbstractTest.getBaseUrl()+"/locations/v1/cities/autocomplete")
                 .then()
                 .statusCode(200)
                 .extract()

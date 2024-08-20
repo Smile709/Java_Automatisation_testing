@@ -11,9 +11,9 @@ public class WeatherFiveDaysTest extends AccuweatherAbstractTest{
     @Test
     void getWeatherFiveDays(){
         Weather weather = given()
-                .queryParam("apikey", getApiKey())
+                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
                 .when()
-                .get(getBaseUrl() + "/forecasts/v1/daily/5day/291662")
+                .get(AccuweatherAbstractTest.getBaseUrl() + "/forecasts/v1/daily/5day/291662")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

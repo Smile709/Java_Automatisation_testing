@@ -10,11 +10,11 @@ public class WeatherTenDaysTest extends AccuweatherAbstractTest {
     @Test
     void getWeatherTenDays_shouldReturn401() {
         given()
-                .queryParam("apikey", getApiKey())
+                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
                 .pathParam("version", "v1")
                 .pathParam("location", 291662)
                 .when()
-                .get(getBaseUrl() + "/forecasts/{version}/daily/10day/{location}")
+                .get(AccuweatherAbstractTest.getBaseUrl() + "/forecasts/{version}/daily/10day/{location}")
                 .then()
                 .statusCode(401);
     }
