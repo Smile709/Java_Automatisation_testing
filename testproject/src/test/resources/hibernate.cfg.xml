@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
+        <!--        <property name="hibernate.hbm2ddl.auto">validate</property>-->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+                для домашней работы 04
+                <property name="connection.url">jdbc:sqlite:for_homework_04.db</property>
+                <mapping class="ru.gb.homeworks.homework_04.CourierInfoEntity"/>
+                <mapping class="ru.gb.homeworks.homework_04.CustomersEntity"/>
+                <mapping class="ru.gb.homeworks.homework_04.DeliveryEntity"/>
+                <mapping class="ru.gb.homeworks.homework_04.OrdersEntity"/>
+                <mapping class="ru.gb.homeworks.homework_04.OrdersProductsEntity"/>
+                <mapping class="ru.gb.homeworks.homework_04.ProductsEntity"/>
+
+        <!--        для лекции 04-->
+        <!--        <property name="connection.url">jdbc:sqlite:for_lesson_04.db</property>-->
+        <!--        <mapping class="ru.gb.lessons.lesson_04.EmployeeEntity"/>-->
+        <!--        <mapping class="ru.gb.lessons.lesson_04.EmployeeInfoEntity"/>-->
+
+        <!--        для семинара 04-->
+        <!--        <property name="connection.url">jdbc:sqlite:for_seminar_04.db</property>-->
+        <!--        <mapping class="ru.gb.seminars.seminar_04.ClientEntity"/>-->
+        <!--        <mapping class="ru.gb.seminars.seminar_04.CreditEntity"/>-->
+        <!--        <mapping class="ru.gb.seminars.seminar_04.CurrentEntity"/>-->
+        <!--        <mapping class="ru.gb.seminars.seminar_04.DebitEntity"/>-->
+        <!--        <mapping class="ru.gb.seminars.seminar_04.EmployeeEntity"/>-->
+
+
+
+
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+
+    </session-factory>
+</hibernate-configuration>
