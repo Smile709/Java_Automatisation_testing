@@ -11,10 +11,10 @@ public class SearchByLocationKeyTest extends AccuweatherAbstractTest {
     void getSearchByLocationKey() {
 
         Location location = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .pathParam("location", 291662)
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl() + "/locations/v1/{location}")
+                .get(getBaseUrl() + "/locations/v1/{location}")
                 .then()
                 .statusCode(200)
                 .extract()

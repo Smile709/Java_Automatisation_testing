@@ -16,7 +16,7 @@ public class CurrentConditionsTest extends AccuweatherAbstractTest {
         List<CurrentCondition> response = given()
                 .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/currentconditions/v1/15")
+                .get(getBaseUrl()+"/currentconditions/v1/15")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

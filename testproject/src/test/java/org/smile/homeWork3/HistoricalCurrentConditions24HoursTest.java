@@ -14,9 +14,9 @@ public class HistoricalCurrentConditions24HoursTest extends AccuweatherAbstractT
     void getHistoricalCurrentConditions24Hours() {
 
         List<Historical> response = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/currentconditions/v1/5/historical/24")
+                .get(getBaseUrl()+"/currentconditions/v1/5/historical/24")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

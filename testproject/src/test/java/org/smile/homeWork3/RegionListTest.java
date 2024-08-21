@@ -14,9 +14,9 @@ public class RegionListTest extends AccuweatherAbstractTest{
     void getRegionList() {
 
         List<Region> response = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/locations/v1/regions")
+                .get(getBaseUrl()+"/locations/v1/regions")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

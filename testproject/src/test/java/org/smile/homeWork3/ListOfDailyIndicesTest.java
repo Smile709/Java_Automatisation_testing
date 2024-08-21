@@ -14,9 +14,9 @@ public class ListOfDailyIndicesTest extends AccuweatherAbstractTest{
     void getListOfDailyIndices() {
 
         List<MetaData> response = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/indices/v1/daily")
+                .get(getBaseUrl()+"/indices/v1/daily")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

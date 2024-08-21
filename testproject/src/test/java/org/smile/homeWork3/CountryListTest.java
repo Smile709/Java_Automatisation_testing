@@ -14,9 +14,9 @@ public class CountryListTest extends AccuweatherAbstractTest{
     void getCountryList() {
 
         List<Country> response = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/locations/v1/countries/ARC")
+                .get(getBaseUrl()+"/locations/v1/countries/ARC")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

@@ -13,9 +13,9 @@ public class CityNeighborsByLocationKeyTest extends AccuweatherAbstractTest{
     @Test
     void getCityNeighborsByLocationKey() {
         List<Location> response = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/locations/v1/cities/neighbors/291662")
+                .get(getBaseUrl()+"/locations/v1/cities/neighbors/291662")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))

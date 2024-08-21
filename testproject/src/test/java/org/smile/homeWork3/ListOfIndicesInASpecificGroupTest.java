@@ -14,9 +14,9 @@ public class ListOfIndicesInASpecificGroupTest extends AccuweatherAbstractTest{
     void getListOfIndicesInASpecificGroup() {
 
         List<MetaData> response = given()
-                .queryParam("apikey", AccuweatherAbstractTest.getApiKey())
+                .queryParam("apikey", getApiKey())
                 .when()
-                .get(AccuweatherAbstractTest.getBaseUrl()+"/indices/v1/daily/groups/8")
+                .get(getBaseUrl()+"/indices/v1/daily/groups/8")
                 .then()
                 .statusCode(200)
                 .time(Matchers.lessThan(2000L))
