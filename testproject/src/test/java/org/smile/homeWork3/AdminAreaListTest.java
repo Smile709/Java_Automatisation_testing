@@ -14,7 +14,7 @@ public class AdminAreaListTest extends AccuweatherAbstractTest {
     void getAdminAreaList() {
 
         List<AdministrativeArea> response = given()
-                .queryParam("apikey", getApiKey())
+                .queryParam("apikey",getApiKey())
                 .when()
                 .get(getBaseUrl()+"/locations/v1/adminareas/MEA")
                 .then()

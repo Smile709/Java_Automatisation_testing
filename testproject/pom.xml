@@ -181,7 +181,7 @@
     <version>2.12.0</version>
     <configuration>
       <!-- Адрес директории для генератора отчета -->
-      <buildDirectory>C:\Users\gepat\Documents\training at GeekBrains\Introduction to Test Automation\Introduction_to_Test_Automation</buildDirectory>
+      <buildDirectory>C:\Users\smile\Documents\training at GeekBrains\Introduction to Test Automation\Introduction_to_Test_Automation</buildDirectory>
     </configuration>
   </plugin>
   <plugin>
@@ -208,12 +208,12 @@
   <!--          <url>jdbc:sqlite:for_homework_04.db</url>-->
   <!--          <locations>filesystem:db/homework_04/migration</locations>-->
     <!--          для лекции 06-->
-    <url>jdbc:sqlite:for_lesson_06.db</url>
-    <locations>filesystem:db/lesson_06/migration</locations>
+ <!--   <url>jdbc:sqlite:for_lesson_06.db</url>
+    <locations>filesystem:db/lesson_06/migration</locations>-->
 
     <!--          для домашней работы 06-->
-    <!--          <url>jdbc:sqlite:for_homework_06.db</url>-->
-    <!--          <locations>filesystem:db/homework_06/migration</locations>-->
+              <url>jdbc:sqlite:for_homework_06.db</url>
+              <locations>filesystem:db/homework_06/migration</locations>
   </configuration>
   </plugin>
   </plugins>
